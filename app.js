@@ -1,3 +1,4 @@
+const serverless = require('serverless-http');
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -25,6 +26,5 @@ mongoose.connect(
   { useNewUrlParser: true, useUnifiedTopology: true }, 
   () => console.log('connected to db')
 );
-
 // Listen to the server
-app.listen(3000);
+module.exports.handler = serverless(app);0
