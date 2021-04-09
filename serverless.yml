@@ -1,10 +1,11 @@
-service: sample-app
+service: serverless-express
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   stage: dev
   region: us-east-1
   memorySize: 128
+  role: arn:aws:iam::976262770987:role/LambdaEdgeRole
 functions:
   app:
     handler: app/app.handler
