@@ -21,3 +21,5 @@ jobs:
         uses: serverless/github-action@master
         with:
           args: deploy
+        env:
+          DB_CONNECTION: ${{ secrets.DB_CONNECTION }}
